@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* navbar css */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -37,6 +39,8 @@
 .nav-links a:hover {
     color: white;
 }
+
+/* hero section css */
 
 .hero {
     display: flex;
@@ -90,4 +94,54 @@
     max-width: 70%;
     height: auto;
     border-radius: 10px;
+}
+
+
+/* services css */
+
+.services {
+    padding: 60px 10%;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #007acc;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
