@@ -6,22 +6,8 @@
     <title>Account</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <form action="" id="login-form">
-        <h1>Login</h1>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Login</button>
-
-        <p>Don't have an account? <a href="./createaccount.html">Create Account</a></p>
-    </form>
+<body onload="loginForm()">
+    <div id="root" class="container"></div>
     <script src="./script.js"></script>
 </body>
 </html>

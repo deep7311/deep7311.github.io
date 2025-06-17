@@ -1,11 +1,15 @@
-form {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container div {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    border: 2px solid rgb(152, 152, 228);
-    border-radius: 10px;
-    background-color: lightblue;
+    align-items: center;
+    background: rgb(159, 159, 232);
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 10px;
 }

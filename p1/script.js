@@ -1,44 +1,59 @@
-const createForm = document.getElementById("create-account-form");
-if (createForm) {
-  createForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+// create login form function
+const loginForm = () => {
+    const str = `<div>
+        <h2>Login Form</h2>
+        <p>
+            <label>Username:</label><br>
+            <input type="text" id="login-username" placeholder="Enter Username">
+        </p>
+        <p>
+            <label>Password:</label><br>
+            <input type="password" id="login-password" placeholder="Enter Password">
+        </p>
+        <p>
+            <button onclick="showHome()">Login</button>
+        </p>
+        <p>
+            <button onclick="registerForm()">Not an Account? Create Account</button>
+        </p>
+    </div>`;
 
-    const userData = {
-      username: username,
-      email: email,
-      password: password,
-    };
-
-    localStorage.setItem("userData", JSON.stringify(userData));
-    alert("Account created");
-    window.location.href = "./index.html";
-  });
+    root.innerHTML = str;
 }
 
-const loginForm = document.getElementById("login-form");
-if (loginForm) {
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const enteredUsername = document.getElementById("username").value;
-    const enteredPassword = document.getElementById("password").value;
+// create register form function
+const registerForm = () => {
+    const str = `<div>
+        <h2>Create Account</h2>
+        <p>
+            <label>Username:</label><br>
+            <input type="text" id="register-username" placeholder="Enter Username">
+        </p>
+        <p>
+            <label>Email:</label><br>
+            <input type="email" id="register-email" placeholder="Enter Email">
+        </p>
+        <p>
+            <label>Password:</label><br>
+            <input type="password" id="register-password" placeholder="Enter Password">
+        </p>
+        <p>
+            <button onclick="loginForm()">Submit</button>
+        </p>
+        <p>
+            <button onclick="loginForm()">Already an Account? Login here...</button>
+        </p>
+    </div>`;
 
-    const storedUser = JSON.parse(localStorage.getItem("userData"));
+    root.innerHTML = str;
+}
 
-    if (!storedUser) {
-      alert("No account");
-      return;
-    }
+// create show home form function
+const showHome = () => {
+    const str = `<div>
+        <h2>Welcome</h2>
+        <p><button onclick="loginForm()">Logout</button></p>
+    </div>`;
 
-    if (
-      enteredUsername === storedUser.username &&
-      enteredPassword === storedUser.password
-    ) {
-      alert("Login successful");
-    } else {
-      alert("Invalid username or password.");
-    }
-  });
+    root.innerHTML = str;
 }
