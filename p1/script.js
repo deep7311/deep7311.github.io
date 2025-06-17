@@ -14,7 +14,7 @@ if (createForm) {
 
     localStorage.setItem("userData", JSON.stringify(userData));
     alert("Account created");
-    window.location.href = "./login.html";
+    window.location.href = "./index.html";
   });
 }
 
