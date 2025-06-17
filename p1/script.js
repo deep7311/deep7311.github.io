@@ -1,5 +1,6 @@
 // creating global variable for storing the user
 let users = []
+let currentUser = null;
 
 const validateUser = () => {
     let username = document.getElementById("login-username").value;
@@ -9,6 +10,7 @@ const validateUser = () => {
     const foundUser = users.find(u => u.name === username && u.password === password);
     
     if (foundUser) {
+        currentUser = foundUser;
         showHome();
     } else {
         alert("Invalid username or password. Please try again.");
@@ -99,9 +101,42 @@ const registerForm = () => {
 // create show home form function
 const showHome = () => {
     const str = `<div>
-        <h2>Welcome</h2>
+        <h2>Welcome ${currentUser.name}</h2>
+        <p>Your Current balance ${currentUser.balance}</p>
+        <select id="transaction-type">
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+        </select>
+        <p>
+            <label>Amount:</label><br>
+            <input type="text" id="transaction-amount" placeholder="Enter Amount">
+            <button onclick="processTrans()">Submit</button>
+        </p>
         <p><button onclick="loginForm()">Logout</button></p>
     </div>`;
 
     root.innerHTML = str;
+}
+
+
+const processTrans = () => {
+    let transType = document.getElementById("transaction-type").value;
+    let transAmount = parseFloat(document.getElementById("transaction-amount").value);
+
+    if (!currentUser || isNaN(transAmount)) {
+        alert("Invalid user or amount");
+        return;
+    }
+
+    if (transType === "deposit") {
+        currentUser.balance += transAmount;
+    } else if (transType === "withdraw") {
+        if (transAmount > currentUser.balance) {
+            alert("Insufficient balance");
+            return;
+        }
+        currentUser.balance -= transAmount;
+    }
+
+    showHome();
 }
