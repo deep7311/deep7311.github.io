@@ -23,7 +23,7 @@ const loginForm = () => {
     if (users.length === 0) {
         usersList = `<p>No users registered yet.</p>`;
     } else {
-        usersList = `<ul>` + users.map(user => `<li>username: ${user.name} (password: ${user.email})</li>`).join('') + `</ul>`;
+        usersList = `<ul>` + users.map(user => `<li>username: ${user.name} (password: ${user.email}) amount: ${user.balance}</li>`).join('') + `</ul>`;
     }
 
     const str = `<div>
@@ -64,6 +64,7 @@ const saveUser = () => {
     user.name = name;
     user.email = email;
     user.password = password;
+    user.balance = 1000;
     users.push(user);
     loginForm();
 }
