@@ -10,6 +10,7 @@
     align-items: center;
     background: rgb(159, 159, 232);
     border: 1px solid blue;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
 }
