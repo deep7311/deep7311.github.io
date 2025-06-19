@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            display: inline-block;
+            width: 350px; 
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: lightcoral;
+            height: 350px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            height: 350px;
+            background-color: lightgray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FlexBox and Grid</h1>
+    <h2>CSS Display Properties</h2>
+    <h3>Inline vs Inline-Block</h3>
+    <p><b>Inline elements</b> new line se start nhi karte aur sirf utni width lete hain jitni unhe zarurat hoti hai.</p>
+    <p><b>Inline-block elements</b> bhi similar hote hain lekin inhe width aur height set kiya ja sakta hai.</p>
+    <br>
+    <ol>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ol>
+    <hr>
+    <br>
+    <h2>CSS Flexbox</h2>
+    <p>Flexbox ek layout model hai jo elements ko flexible aur responsive tarike se arrange karne ki suvidha deta hai.</p>
+    <p>Flexbox ka use karke aap elements ko horizontally ya vertically align kar sakte hain, unhe space distribute kar sakte hain, aur unki size ko adjust kar sakte hain.</p>
+    <br>
+    <div class="flex">
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
+        <div>Child 4</div>
+        <div>Child 5</div>
+        <div>Child 6</div>
+    </div>
+
+    <h2>CSS Grid</h2>
+    <p>CSS Grid ek powerful layout system hai jo aapko 2D grid layouts banane ki suvidha deta hai.</p>
+    <p>Grid ka use karke aap rows aur columns mein elements ko arrange kar sakte hain, unhe size aur position set kar sakte hain, aur complex layouts create kar sakte hain.</p>
+    <br>
+    <div class="grid">
+        <div style="background-color: lightblue;">Grid Item 1</div>
+        <div style="background-color: lightgreen;">Grid Item 2</div>
+        <div style="background-color: lightcoral;">Grid Item 3</div>
+        <div style="background-color: lightyellow;">Grid Item 4</div>
+        <div style="background-color: lightpink;">Grid Item 5</div>
+    </div>
+</body>
+</html>
