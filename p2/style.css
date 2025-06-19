@@ -318,3 +318,100 @@ body {
 .main-hero .right .hero1-text p i {
     margin-left: 5px;
 }
+
+
+.categories .topHead {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 25px;
+
+}
+
+.categories .topHead .leftHead p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.categories .topHead .rightHead {
+    display: flex;
+}
+
+.categories .topHead .rightHead .arrows {
+    margin-left: 10px;
+}
+
+.categories .topHead .rightHead .arrows i {
+    margin-left: 5px;
+    padding: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.categories .topHead .rightHead p {
+    color: #7e7575;
+    margin-top: 5px;
+}
+
+.beverages {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 80px 0;
+}
+
+.beverages .bev {
+    text-align: center;
+    padding: 30px;
+    background-color: #fffefe;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px #e1d7d7;
+    transition: transform 0.3s;
+}
+
+.beverages .bev:hover {
+    transform: scale(1.1);
+}
+
+.beverages .bev p {
+    font-weight: bold;
+}
+
+.beverages .bev img {
+    margin-bottom: 10px;
+}
+
+
+/* ----------Brands---------- */
+
+.brands {
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-around;
+    margin-bottom: 80px;
+    margin-right: 100px;
+}
+
+.brands .brand {
+    display: flex;
+    align-items: center;
+    background-color: #fffefe;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px #e1d7d7;
+    width: 300px;
+}
+
+.brands .brand img {
+    width: 40%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.brands .brand .brand-text p:first-child {
+    color: rgb(75, 73, 73);
+}
+
+.brands .brand .brand-text p:last-child {
+    color: #7a7676;
+}
