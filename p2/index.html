@@ -1,11 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <h1>Food Mart</h1>
+    <section class="header">
+        <div class="main-header">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="logo" class="logo">
+            </div>
+            <div class="search-container">
+                <div class="box">
+                    <select name="" id="">
+                        <option value="" disabled selected>All Categories</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="beverages">Beverages</option>
+                        <option value="snacks">Snacks</option>
+                        <option value="bakery">Bakery</option>
+                        <option value="frozen-foods">Frozen Foods</option>
+                        <option value="meat">Meat</option>
+                        <option value="seafood">Seafood</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for more than 20000 products" class="search-input">
+                    <button class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="support">
+                <div class="support-text">
+                    <p>For Support?</p>
+                    <p>+980-34984089</p>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="cart">
+                <div class="box">
+                    <select name="cart" id="cart">
+                        <option value="" disabled selected>Your Cart</option>
+                        <option value="item1">Item 1</option>
+                        <option value="item2">Item 2</option>
+                        <option value="item3">Item 3</option>
+                    </select>
+                </div>
+                <div class="price">
+                    <p>$1290.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nav-section">
+        <div class="shop">
+            <div class="shop-text">
+                <p>Shop by Departments</p>
+            </div>
+            <div class="shop-icon">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Brand</a></li>
+                <div class="pages">
+                    <p>Pages</p>
+                    <div class="pages-icon">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="main-hero">
+    <section class="left">
+        <div class="hero">
+            <div class="box1">
+                <div class="hero-text">
+                    <p>100% Natural</p>
+                    <h1>Fresh Smoothies <br>& Summer Juice</h1>
+                    <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat cum aliquam, est quaerat fuga facilis.</p>
+                    <button class="hero-button">Shop Now</button>
+                </div>
+                <div class="hero-image">
+                    <img src="images/product-thumb-1.png" alt="hero image" class="hero-img">
+                </div>
+            </div>
+            <div class="box2">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="right">
+        <div class="box1">
+            <img src="images/slide-3.jpg" alt="hero image" class="hero1-img">
+            <div class="hero1-text">
+                <h2>20% Off</h2>
+                <p><span class="line"></span>SALE</p>
+                <h1>Fruits &<br>Vegetables</h1>
+                <p><span>Shop Collections</span><i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+        </div>
+        <div class="box2">
+            <img src="images/slide-4.jpg" alt="hero image" class="hero1-img">
+            <div class="hero1-text">
+                <h2>15% Off</h2>
+                <p><span class="line"></span>SALE</p>
+                <h1>Baked Products</h1>
+                <p><span>Shop Collections</span><i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+        </div>
+    </section>
+</section>
+
 </body>
+
 </html>
