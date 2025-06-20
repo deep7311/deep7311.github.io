@@ -5,7 +5,9 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ----------------- HEADER ----------------- */
@@ -414,4 +416,233 @@ body {
 
 .brands .brand .brand-text p:last-child {
     color: #7a7676;
+}
+
+.categories .topHead ul {
+    list-style: none;
+}
+
+.categories .topHead .items  {
+    display: flex;
+    gap: 20px;
+}
+
+.items a {
+    position: relative;
+    text-decoration: none;
+    color: #7a7676;
+    padding-bottom: 10px; 
+}
+
+.items a::after {
+    content: "";
+    position: absolute;
+    left: -20%;
+    bottom: 0;
+    width: 150%;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    /* background-color: gold; */
+}
+
+
+.items a.active::after {
+    background-color: gold;
+}
+
+.items a:hover::after {
+    background-color: gold;
+}
+
+/* ------------------CARDS CSS------------------ */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0 0 calc(20% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    height: 320px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .box {
+    position: relative;
+    padding: 10px;
+}
+
+.card .box img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    background-color: #fbf5f5;
+    border-radius: 10px;
+}
+
+.card .overlay-img-text {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    align-items: center;
+}
+
+.card .overlay-img-text p {
+    background-color: gold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.card .overlay-img-text i {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.pname {
+    margin: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.details {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-left: 10px;
+    color: #888;
+    gap: 5px;
+}
+
+.detail i {
+    color: gold;
+}
+
+.price {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+    padding-left: 10px;
+}
+
+
+/* -------------FOOTER DETAILS------------------ */
+
+.owner-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.owner-details .socials .brand-image {
+    margin-bottom: 40px;
+}
+
+
+.owner-details .socials .social i {
+    margin-left: 10px;
+    border: 1px solid #7e7575;
+    border-radius: 5px;
+    color: #7e7575;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.owner-details .socials .social i:hover {
+    background: #333;
+    color: white;
+}
+
+.owner-details .services h4 {
+    margin-bottom: 15px;
+}
+
+.owner-details .services p {
+    color: #7e7575;
+    margin-bottom: 10px;
+}
+
+.owner-details .services .filler {
+    display: flex;
+}
+
+.owner-details .services .filler input {
+    width: 200px;
+    height: 36px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.owner-details .services .filler button {
+    height: 36px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 0 5px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.owner-details .services .filler button:hover {
+    background: #7a7676;
+}
+
+
+/* -----------------FOOTER----------------- */
+
+footer {
+    text-align: center;
+    color: #7a7676;
+    padding: 15px;
+    background-color: #f0f0f0;
+    margin-top: auto;
 }
