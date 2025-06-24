@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let user = {};
+    let users = [];
+
+    function addUser() {
+      users.push({ ...user });
+      console.log("users:", users);
+    }
+  </script>
+</head>
+<body>
+  <h1>Register Form</h1>
+
+  <input type="text" placeholder="Name" onchange="user.name = event.target.value;">
+  <input type="email" placeholder="Email" onchange="user.email = this.value;">
+  <input type="password" placeholder="Password" onchange="user.password = this.value;">
+
+  <button onclick="addUser()">Register</button>
+</body>
+</html>
