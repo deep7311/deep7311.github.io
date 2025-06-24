@@ -7,12 +7,12 @@ let result = document.getElementById("result");
 
 let getMovie = () => {
     let movieName = movieNameRef.value.trim();
-    let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
+    let url = `https://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
 
     //If input field is empty
     if (movieName.length <= 0) {
         result.innerHTML = `<h3 class="msg">Please Enter A Movie Name</h3>`;
-        document.title = "🎥 Movie Search App";
+        document.title = "Movie Search App";
         return;
     }
 
@@ -21,7 +21,7 @@ let getMovie = () => {
         let dots = 0;
         let loadingInterval = setInterval(() => {
             dots = (dots + 1) % 4;
-            document.title = `🔍 Searching${".".repeat(dots)}`;
+            document.title = `Searching${".".repeat(dots)}`;
         }, 500);
 
         fetch(url)
@@ -55,18 +55,18 @@ let getMovie = () => {
                 <h3>Cast:</h3>
                 <p>${data.Actors}</p>
             `;
-                    document.title = `🎬 ${data.Title} | Movie Info`;
+                    document.title = `${data.Title} | Movie Info`;
                 }
                 //If movie does not exist in database
                 else {
                     result.innerHTML = `<h3 class="msg">${data.Error}</h3>`;
-                    document.title = `❌ Not Found: ${movieName}`;
+                    document.title = `Not Found: ${movieName}`;
                 }
             })
             .catch(() => {
                 clearInterval(loadingInterval);
                 result.innerHTML = `<h3 class="msg">Error Occurred</h3>`;
-                document.title = `⚠️ Error Fetching Data`;
+                document.title = `Error Fetching Data`;
             })
     }
 }
