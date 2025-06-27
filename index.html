@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-  <div class="container">
-    <div class="top-bar">
-      <h1>Deepak</h1>
-      <a href="./portfolio/index.html">My Portfolio</a>
-    </div>
+    <nav class="navbar">
+        <h1 class="logo">Deepak</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="card-container">
-      <div class="card">
-        <h2>My Folders</h2>
-        <ol>
-          <li><a href="./html/index.html">HTML</a></li>
-          <li><a href="./css/index.html">CSS</a></li>
-          <li><a href="./js/index.html">JavaScript</a></li>
-        </ol>
-      </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>MERN Stack Developer</h2>
+            <p>Welcome to my portfolio! I am a MERN Stack Developer with a passion for building dynamic and responsive web applications. Here you can find my projects, skills, and contact information.</p>
+            <button class="hero-btn">View my projects</button>
+        </div>
+        <div class="hero-image">
+            <img src="./MERN-Stack-Development.png" alt="MERN Stack Illustration">
+        </div>
+    </section>
 
-      <div class="card">
-        <h2>My Projects</h2>
-        <ol>
-          <li><a href="./p1/index.html">Project 1 (My Bank App)</a></li>
-          <li><a href="./p2/index.html">Project 2 (FoodMart App)</a></li>
-          <li><a href="./p3/MovieGuideApp/index.html">Project 3 (Movie Guide App)</a></li>
-        </ol>
-      </div>
-    </div>
+    <section class="services">
+        <h2>My Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Frontend Development</h3>
+                <p>Building responsive and user-friendly interfaces using React.js and Redux.</p>
+            </div>
+            <div class="service-card">
+                <h3>Backend Development</h3>
+                <p>Creating robust server-side applications using Node.js and Express.js.</p>
+            </div>
+            <div class="service-card">
+                <h3>Mobile App Development</h3>
+                <p>Developing cross-platform mobile applications using React Native.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h2>My Assignments</h2>
-      <ol>
-        <li><a href="#">Assignment 1</a></li>
-        <li><a href="#">Assignment 2</a></li>
-      </ol>
-    </div>
-  </div>
+    <footer>
+        <p>&copy; 2025 Deepak. All rights reserved.</p>
+    </footer>
 </body>
 </html>
