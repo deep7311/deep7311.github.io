@@ -28,7 +28,7 @@
           for building dynamic and responsive web applications. Here you can
           find my projects, skills, and contact information.
         </p>
-        <a id="#projects-section" class="hero-btn">View my projects</a>
+        <a href="#projects-section" class="hero-btn">View my projects</a>
       </div>
       <div class="hero-image">
         <img
@@ -39,8 +39,8 @@
     </section>
 
     <section class="services" id="services-section">
-      <h2>My Services</h2>
-      <div class="service-cards">
+      <h2 class="fade-in">My Services</h2>
+      <div class="service-cards fade-in">
         <div class="service-card">
           <h3>Frontend Development</h3>
           <p>
@@ -65,11 +65,11 @@
     </section>
 
     <section class="projects" id="projects-section">
-      <h2>My Projects</h2>
+      <h2 class="fade-in">My Projects</h2>
       <div class="project-cards">
         <a
           href="https://summer-pep-class-mern-frontend.vercel.app/"
-          class="project-card"
+          class="project-card fade-in"
           target="_blank"
         >
           <h3>Mega Store App</h3>
@@ -82,7 +82,7 @@
         </a>
         <a
           href="./p3/MovieGuideApp/index.html"
-          class="project-card"
+          class="project-card fade-in"
           target="_blank"
         >
           <h3>Movie Guide App</h3>
@@ -92,8 +92,8 @@
           </p>
         </a>
         <a
-          href="https://react-generator-frontend.vercel.app/"
-          class="project-card"
+          href="https://react-generator.vercel.app/"
+          class="project-card fade-in"
           target="_blank"
         >
           <h3>AI JSX Generator</h3>
@@ -106,7 +106,7 @@
 
         <a
           href="https://social-app-frontend-tau.vercel.app/"
-          class="project-card"
+          class="project-card fade-in"
           target="_blank"
         >
           <h3>Social Media App</h3>
@@ -119,7 +119,7 @@
 
         <a
           href="https://mybank-frontend.vercel.app/"
-          class="project-card"
+          class="project-card fade-in"
           target="_blank"
         >
           <h3>My Bank</h3>
@@ -130,7 +130,7 @@
         </a>
         <a
           href="https://todo-app-frontend-eight-eta.vercel.app/"
-          class="project-card"
+          class="project-card fade-in"
           target="_blank"
         >
           <h3>ToDo App</h3>
@@ -139,13 +139,13 @@
             login. Users can add, update status, and delete their tasks easily.
           </p>
         </a>
-        <a href="./p2/index.html" class="project-card" target="_blank">
+        <a href="./p2/index.html" class="project-card fade-in" target="_blank">
           <h3>FoodMart</h3>
           <p>An online food ordering platform with the help of css</p>
         </a>
         <a
           href="./p4/FruitCartApp/index.html"
-          class="project-card"
+          class="project-card fade-in"
           target="_blank"
         >
           <h3>Fruit Cart App</h3>
@@ -160,5 +160,24 @@
     <footer>
       <p>&copy; 2025 Deepak. All rights reserved.</p>
     </footer>
+    <script>
+      const faders = document.querySelectorAll(".fade-in");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // only animate once
+            }
+          });
+        },
+        {
+          threshold: 0.1, // Trigger when 10% is visible
+        }
+      );
+
+      faders.forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
