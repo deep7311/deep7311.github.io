@@ -78,6 +78,7 @@
     cursor: pointer;
     color: white;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
 .hero-btn:hover {
